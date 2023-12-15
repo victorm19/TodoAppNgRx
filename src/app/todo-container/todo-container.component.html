@@ -1,0 +1,19 @@
+<div class="container-xl">
+  <h1>NgRx - Todo App</h1>
+  <div class="row">
+    <div class="col-4">
+      <h3>Agregar Tarea</h3>
+      <app-add-todo (added)="addTodo($event)"></app-add-todo>
+    </div>
+    <div class="col-8">
+      <h3>Lista Tareas</h3>
+      <app-item-todo
+        *ngFor="let todo of todos"
+        [todo]="todo"
+        (removed)="removeTodo(todo)"
+        (reopened)="markAsPending(todo)"
+        (completed)="markAsCompleted(todo)">
+      </app-item-todo>
+    </div>
+  </div>
+</div>

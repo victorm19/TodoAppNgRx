@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-6">
+    <button *ngIf="!todo.completed" (click)="complete()" class="btn btn-light">
+      <img src="assets/icons/task_pending.svg" alt="delete" />
+    </button>
+    <button *ngIf="todo.completed" (click)="reopen()" class="btn btn-light">
+      <img src="assets/icons/task_completed.svg" alt="delete" />
+    </button>
+    <span [ngClass]="{'completed': isCompleted}">{{ todo.description }}</span>
+  </div>
+  <div class="col-4">
+    <button (click)="remove()" class="btn btn-light ml-auto">
+      <img src="assets/icons/delete.svg" alt="delete" />
+    </button>
+  </div>
+</div>

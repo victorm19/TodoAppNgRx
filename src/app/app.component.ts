@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: '<app-todo-container></app-todo-container>'
 })
 export class AppComponent {
-  title = 'todo-app';
+  title = 'NgRx - Todo App';
 }

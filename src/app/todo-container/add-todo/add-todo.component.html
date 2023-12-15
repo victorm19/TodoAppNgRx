@@ -1,0 +1,10 @@
+<form [formGroup]="addForm" (ngSubmit)="add()" class="row">
+  <div class="col-auto">
+    <input type="text" class="form-control" name="description" formControlName="description" autocomplete="off" />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-dark" [disabled]="addForm.invalid || addForm.pristine">
+      Agregar
+    </button>
+  </div>
+</form>
